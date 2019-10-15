@@ -1,10 +1,31 @@
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+{% extends "layout2.html" %}
+
+{% block title %}
+    search
+{% endblock %}
+
+{% block main %}
 <body>
     <div class="searchrow">
 
       <!-- options and checkboxes for allergies in the first column -->
       <div class="column">
-        <h3>Category</h3>
+        <h3>Allergies</h3>
+
+        <label class="container1">Gluten-free
+          <input type="checkbox" name="Gluten-free" value="393^Gluten-Free">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container1">Peanut-free
+          <input type="checkbox" name= "Peanut-free" value="394^Peanut-Free">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container1">Seafood-free
+          <input type="checkbox" name="Seafood-free" value="398^Seafood-Free">
+          <span class="checkmark"></span>
+        </label>
 
         <label class="container1">Sesame-free
           <input type="checkbox" name="Sesame-free" value="399^Sesame-Free">
@@ -44,7 +65,7 @@
 
       <!-- options and checkboxes for diet in the first column -->
       <div class="column">
-        <h3>Price</h3>
+        <h3>Diet</h3>
 
         <label class="container1">Ketogenic
           <input type="checkbox" name="Ketogenic" value="406^Ketogenic">
@@ -89,7 +110,7 @@
 
       <!-- options and checkboxes for type of course in the first column -->
       <div class="column">
-        <h3>Appsize</h3>
+        <h3>Course</h3>
 
         <label class="container1">Main dishes
           <input type="checkbox" name="Main Dishes" value="course^course-Main Dishes">
@@ -163,3 +184,5 @@
       </div>
     </div>
 </body>
+
+{% endblock %}
