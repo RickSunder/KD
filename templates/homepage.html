@@ -1,52 +1,39 @@
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <body>
     <div class="searchrow">
 
       <!-- options and checkboxes for allergies in the first column -->
       <div class="column">
-        <h3>Category</h3>
-
-        <label class="container1">Games
-          <input type="checkbox" name="Games" value="pr:games">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container1">Lifestyle
-          <input type="checkbox" name="Lifestyle" value="399^Sesame-Free">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container1">Music
-          <input type="checkbox" name="Music" value="399^Sesame-Free">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container1">Shopping
-          <input type="checkbox" name="Shopping" value="399^Sesame-Free">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container1">Entertainment
-          <input type="checkbox" name="Entertainment" value="399^Sesame-Free">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container1">Costumization
-          <input type="checkbox" name="Costumization" value="399^Sesame-Free">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container1">Education
-          <input type="checkbox" name="Education" value="399^Sesame-Free">
-          <span class="checkmark"></span>
-        </label>
-      </div>
+        <div class="container">
+            <h3>Category</h3>
+            <ul class="ks-cboxtags">
+              <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Games</label></li>
+              <li><input type="checkbox" id="checkboxTwo" value="Cotton Candy" checked><label for="checkboxTwo">Lifestyle</label></li>
+              <li><input type="checkbox" id="checkboxThree" value="Rarity" checked><label for="checkboxThree">Cooking</label></li>
+              <li><input type="checkbox" id="checkboxFour" value="Moondancer"><label for="checkboxFour">Moondancer</label></li>
+              <li><input type="checkbox" id="checkboxFive" value="Surprise"><label for="checkboxFive">Surprise</label></li>
+              <li><input type="checkbox" id="checkboxSix" value="Twilight Sparkle" checked><label for="checkboxSix">Twilight
+                              Sparkle</label></li>
+              <li><input type="checkbox" id="checkboxSeven" value="Fluttershy"><label for="checkboxSeven">Fluttershy</label></li>
+              <li><input type="checkbox" id="checkboxEight" value="Derpy Hooves"><label for="checkboxEight">Derpy Hooves</label></li>
+              <li><input type="checkbox" id="checkboxNine" value="Princess Celestia"><label for="checkboxNine">Princess
+                              Celestia</label></li>
+              <li><input type="checkbox" id="checkboxTen" value="Gusty"><label for="checkboxTen">Gusty</label></li>
+              <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Discord"><label for="checkboxEleven">Discord</label></li>
+              <li><input type="checkbox" id="checkboxTwelve" value="Clover"><label for="checkboxTwelve">Clover</label></li>
+              <li><input type="checkbox" id="checkboxThirteen" value="Baby Moondancer"><label for="checkboxThirteen">Baby
+                              Moondancer</label></li>
+              <li><input type="checkbox" id="checkboxFourteen" value="Medley"><label for="checkboxFourteen">Medley</label></li>
+              <li><input type="checkbox" id="checkboxFifteen" value="Firefly"><label for="checkboxFifteen">Firefly</label></li>
+            </ul>
+          
+          </div>
 
       <!-- options and checkboxes for diet in the first column -->
       <div class="column">
-        <h3>Price</h3>
-        <label class="container1">Paid
-          <input type="checkbox" name="Paid" value="406^Ketogenic">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container1">Free
-          <input type="checkbox" name="Free" value="406^Ketogenic">
-          <span class="checkmark"></span>
-        </label>
+
+
       </div>
 
       <!-- options and checkboxes for type of course in the first column -->
