@@ -96,16 +96,15 @@ ul.ks-cboxtags li input[type="checkbox"] {
 
 /* Create three equal columns that floats next to each other */
 .column {
-height: 100%;
 float: middle;
 background-color: white;
-padding: 50px 50px 50px 50px;
+padding: 0px 0px 50px 0px;
+margin: auto;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 text-align: center;
-padding-bottom: 50px;
 }
 
-/****** Style Star Rating Widget *****/
+/** Style Star Rating Widget ***/
 .starbox {
   background-color: white;
   width: 200px;
@@ -134,7 +133,7 @@ margin: auto;
 float: right
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
+/** CSS Magic to Highlight Stars on Hover **/
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
@@ -145,7 +144,7 @@ float: right
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFD700;  } 
 
-/*Search BUTTON*/
+/**Search BUTTON**/
 .myButton {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: #ffc3a0;
