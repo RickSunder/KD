@@ -98,14 +98,12 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 /* Create three equal columns that floats next to each other */
 .column {
+height: 100%;
 float: middle;
 background-color: white;
-padding-right: 50px;
-padding-left: 50px;
-padding-top: -50px;
-height: 100%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 text-align: center;
+padding-bottom: 50px;
 }
 
 /****** Style Star Rating Widget *****/
@@ -113,8 +111,6 @@ text-align: center;
 .rating { 
   border: none;
   float: center;
-  position: absolute;
-  right: 955px;
 
 }
 

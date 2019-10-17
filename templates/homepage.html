@@ -1,55 +1,56 @@
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
-  <div class="column">
-    <br><br>
-    <h3>Category</h3>
-      <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxOne" value="games"><label for="checkboxOne">Games</label></li>
-        <li><input type="checkbox" id="checkboxTwo" value="Lifestyle" ><label for="checkboxTwo">Lifestyle</label></li>
-        <li><input type="checkbox" id="checkboxThree" value="Music" ><label for="checkboxThree">Music</label></li>
-        <li><input type="checkbox" id="checkboxFour" value="Shopping"><label for="checkboxFour">Shopping</label></li>
-        <li><input type="checkbox" id="checkboxFive" value="Entertainment"><label for="checkboxFive">Entertainment</label></li>
-      </ul>
+    <div class="column">
+      <br><br>
+      <h3>Category</h3>
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxOne" value="games"><label for="checkboxOne">Games</label></li>
+          <li><input type="checkbox" id="checkboxTwo" value="Lifestyle" ><label for="checkboxTwo">Lifestyle</label></li>
+          <li><input type="checkbox" id="checkboxThree" value="Music" ><label for="checkboxThree">Music</label></li>
+          <li><input type="checkbox" id="checkboxFour" value="Shopping"><label for="checkboxFour">Shopping</label></li>
+          <li><input type="checkbox" id="checkboxFive" value="Entertainment"><label for="checkboxFive">Entertainment</label></li>
+        </ul>
 
-    <h3>Appsize</h3>
-      <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxSix" value="0to50MB"><label for="checkboxSix">0 to 50 MB</label></li>
-        <li><input type="checkbox" id="checkboxSeven" value="50to100MB"><label for="checkboxSeven">50 to 100 MB</label></li>
-        <li><input type="checkbox" id="checkboxEight" value="100to250MB" ><label for="checkboxEight">100 to 250 MB</label></li>
-        <li><input type="checkbox" id="checkboxNine" value="250to500MB" ><label for="checkboxNine">250 to 500 MB</label></li>
-        <li><input type="checkbox" id="checkboxTen" value="500+MB" ><label for="checkboxTen">500+ MB</label></li>
-      </ul>
+      <h3>Appsize</h3>
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxSix" value="0to50MB"><label for="checkboxSix">0 to 50 MB</label></li>
+          <li><input type="checkbox" id="checkboxSeven" value="50to100MB"><label for="checkboxSeven">50 to 100 MB</label></li>
+          <li><input type="checkbox" id="checkboxEight" value="100to250MB" ><label for="checkboxEight">100 to 250 MB</label></li>
+          <li><input type="checkbox" id="checkboxNine" value="250to500MB" ><label for="checkboxNine">250 to 500 MB</label></li>
+          <li><input type="checkbox" id="checkboxTen" value="500+MB" ><label for="checkboxTen">500+ MB</label></li>
+        </ul>
 
-    <h3>Age</h3>
-      <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxEleven" value="Kids(-12)"><label for="checkboxEleven">Kids (-12)</label></li>
-        <li><input type="checkbox" id="checkboxTwelve" value="Teens(12-18)"><label for="checkboxTwelve">Teens(12-18)</label></li>
-        <li><input type="checkbox" id="checkboxThirteen" value="Adults(18+)" ><label for="checkboxThirteen">Adults(18+)</label></li>
-      </ul>
+      <h3>Age</h3>
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxEleven" value="Kids(-12)"><label for="checkboxEleven">Kids (-12)</label></li>
+          <li><input type="checkbox" id="checkboxTwelve" value="Teens(12-18)"><label for="checkboxTwelve">Teens(12-18)</label></li>
+          <li><input type="checkbox" id="checkboxThirteen" value="Adults(18+)" ><label for="checkboxThirteen">Adults(18+)</label></li>
+        </ul>
 
-    <h3>Rating</h3>
-      <fieldset class="rating">
-        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-        <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-      </fieldset>
-    <br><br><br>
-    <h3>Platform</h3>
-      <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxFourteen" value="Andoid"><label for="checkboxFourteen">Andoid</label></li>
-        <li><input type="checkbox" id="checkboxFifteen" value="iPhone"><label for="checkboxFifteen">iPhone</label></li>
-      </ul>
+      <h3>Rating</h3>
+        <fieldset class="rating"> 
+          <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+          <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+          <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+        </fieldset>
+      <br><br><br>
+      <h3>Platform</h3>
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxFourteen" value="Andoid"><label for="checkboxFourteen">Andoid</label></li>
+          <li><input type="checkbox" id="checkboxFifteen" value="iPhone"><label for="checkboxFifteen">iPhone</label></li>
+        </ul>
 
-    <h3>Price</h3>
-      <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxSixteen" value="Paid"><label for="checkboxSixteen">Paid</label></li>
-        <li><input type="checkbox" id="checkboxSeventeen" value="Free"><label for="checkboxSeventeen">Free</label></li>
-      </ul>
-     
-       
-    <button href="results.html" type="button" class="myButton">Search</a>
+      <h3>Price</h3>
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxSixteen" value="Paid"><label for="checkboxSixteen">Paid</label></li>
+          <li><input type="checkbox" id="checkboxSeventeen" value="Free"><label for="checkboxSeventeen">Free</label></li>
+        </ul>
+      
+        
+      <button href="results.html" type="button" class="myButton">Search</a>
   </div>
 </body>
