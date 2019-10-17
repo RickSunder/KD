@@ -98,19 +98,22 @@ ul.ks-cboxtags li input[type="checkbox"] {
 .column {
 float: middle;
 background-color: white;
-padding-right: 50px 50px 50px 50px;
+padding: 50px 50px 50px 50px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 text-align: center;
 }
 
 /****** Style Star Rating Widget *****/
+.starbox {
+  background-color: white;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 .rating { 
   border: none;
-  float: center;
-  position: absolute;
-  right: 560px;
-
 }
 
 .rating > input { display: none; } 
@@ -125,8 +128,8 @@ text-align: center;
 
 .rating > label { 
 color: #ddd; 
-float: right;
 margin: auto;
+float: right
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
@@ -144,7 +147,7 @@ margin: auto;
 .myButton {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: #ffc3a0;
-	background: -webkit-linear-gradient(to left, #ffc3a0, #ffafbd);
+	background: -webkit-linear-gradient(to left, hsl(22, 100%, 81%), #ffafbd);
 	background: linear-gradient(to left, #ffc3a0, #ffafbd);
 	border-radius:8px;
 	display:inline-block;
