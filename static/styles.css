@@ -12,11 +12,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: #FFEFBA;
+    background: #ffc3a0;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+    background: -webkit-linear-gradient(to right, #ffc3a0, #ffafbd);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+    background: linear-gradient(to right, #ffc3a0, #ffafbd);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -30,6 +30,7 @@ body {
 ul.ks-cboxtags {
     list-style: none;
     padding: 20px;
+    float: middle
 }
 ul.ks-cboxtags li{
   display: inline;
@@ -98,17 +99,23 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 /* Create three equal columns that floats next to each other */
 .column {
 float: middle;
-/*width: 30%;*/
+background-color: white;
 padding-right: 50px;
 padding-left: 50px;
-padding-top: 0px;
+padding-top: -50px;
+height: 100%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: center;
 }
 
 /****** Style Star Rating Widget *****/
 
 .rating { 
   border: none;
-  float: left;
+  float: center;
+  position: absolute;
+  right: 955px;
+
 }
 
 .rating > input { display: none; } 
@@ -118,11 +125,13 @@ padding-top: 0px;
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
+  
 }
 
 .rating > label { 
-  color: #ddd; 
- float: right; 
+color: #ddd; 
+float: right;
+margin: auto;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
@@ -137,13 +146,30 @@ padding-top: 0px;
 .rating > input:checked ~ label:hover ~ label { color: #FFD700;  } 
 
 /*Search BUTTON*/
-.button2 {
-  border-radius: 2px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.myButton {
+	box-shadow: 0px 10px 14px -7px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #854629;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  background-color:#bc3315;
+  color:#ffffff;
+}
+.myButton:active {
+  position:relative;
+  color:#ffffff;
+	top:1px;
 }
 
-.button2:hover {
-  border-radius: 2px;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
 /*Search BUTTON*/
