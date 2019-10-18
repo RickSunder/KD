@@ -1,70 +1,20 @@
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <body>
-    
-            
-
+    <div class ="go-back-button">
+        <a href="{{ url_for('homepage') }}"><button id="button" class="myButton">🡰 Go Back</button></a>
+    </div>
     <div class="column">
-        <div class ="go-back-button">
-            <a href="{{ url_for('homepage') }}"><button id="button" class="myButton">🡰 Go Back</button></a>
-        </div>
-        
-        <h3>Results:</h3>
+    <h3>Results:</h3>
+        {% for category in categories %}
         <div class="grid-container">
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">{{ values }}</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
-                <div class="grid-item">
-                    <div class="item-title">Title</div>
-                    <div class="item-category">Category</div>
-                    <div class="item-price">Price</div>
-                    <div class="item-size">Size</div>
-                </div>
+            <div class="grid-item">
+                <div class="item-title">Title</div>
+                <div class="item-category">{{ category }}</div>
+                <div class="item-price">Price</div>
+                <div class="item-size">Size</div>
+            </div>
         </div>
+        {% endfor %}
     </div>
 </body>

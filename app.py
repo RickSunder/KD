@@ -10,13 +10,24 @@ def homepage():
 
 @app.route("/results", methods=['POST'])
 def results():
-    checked = []
+    categories = get_category()
+    return render_template("results.html", categories = categories)
+
+def get_category():
+    checked_categories = []
     categories = ['Games', 'Lifestyle','Music','Shopping','Entertainment']
     for category in categories:
         if request.form.get(category):
-            checked.append(request.form[category])
-    return render_template("results.html", values = checked)
+            checked_categories.append(request.form[category])
+    return checked_categories
 
+def get_category():
+    checked_categories = []
+    categories = ['Games', 'Lifestyle','Music','Shopping','Entertainment']
+    for category in categories:
+        if request.form.get(category):
+            checked_categories.append(request.form[category])
+    return checked_categories
 
 
 if __name__ == "__main__":
