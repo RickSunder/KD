@@ -1,7 +1,14 @@
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <body>
+    
+            
+
     <div class="column">
+        <div class ="go-back-button">
+            <a href="{{ url_for('homepage') }}"><button id="button" class="myButton">🡰 Go Back</button></a>
+        </div>
+        
         <h3>Results:</h3>
         <div class="grid-container">
                 <div class="grid-item">

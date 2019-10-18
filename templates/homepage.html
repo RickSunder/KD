@@ -5,7 +5,7 @@
     <div class="column">
       <br><br>
       <h3>Category</h3>
-        <ul class="ks-cboxtags">
+        <ul class="ks-cboxtags" method="post">
           <li><input type="checkbox" id="checkboxOne" value="games"><label for="checkboxOne">Games</label></li>
           <li><input type="checkbox" id="checkboxTwo" value="Lifestyle" ><label for="checkboxTwo">Lifestyle</label></li>
           <li><input type="checkbox" id="checkboxThree" value="Music" ><label for="checkboxThree">Music</label></li>
@@ -14,7 +14,7 @@
         </ul>
 
       <h3>Appsize</h3>
-        <ul class="ks-cboxtags">
+        <ul class="ks-cboxtags" method="post">
           <li><input type="checkbox" id="checkboxSix" value="0to50MB"><label for="checkboxSix">0 to 50 MB</label></li>
           <li><input type="checkbox" id="checkboxSeven" value="50to100MB"><label for="checkboxSeven">50 to 100 MB</label></li>
           <li><input type="checkbox" id="checkboxEight" value="100to250MB" ><label for="checkboxEight">100 to 250 MB</label></li>
@@ -23,14 +23,14 @@
         </ul>
 
       <h3>Age</h3>
-        <ul class="ks-cboxtags">
+        <ul class="ks-cboxtags" method="post">
           <li><input type="checkbox" id="checkboxEleven" value="Kids(-12)"><label for="checkboxEleven">Kids (-12)</label></li>
           <li><input type="checkbox" id="checkboxTwelve" value="Teens(12-18)"><label for="checkboxTwelve">Teens(12-18)</label></li>
           <li><input type="checkbox" id="checkboxThirteen" value="Adults(18+)" ><label for="checkboxThirteen">Adults(18+)</label></li>
         </ul>
 
-    <h3>Rating</h3>
-      <ul class="starbox"> 
+    <h3>Minimum Rating</h3>
+      <ul class="starbox" method="post"> 
         <fieldset class="rating">
           <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
           <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
@@ -39,14 +39,17 @@
           <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
         </fieldset>
       </ul><br>
-    <h3>Platform</h3>
-      <ul class="ks-cboxtags">
-        <li><input type="checkbox" id="checkboxFourteen" value="Andoid"><label for="checkboxFourteen">Andoid</label></li>
-        <li><input type="checkbox" id="checkboxFifteen" value="iPhone"><label for="checkboxFifteen">iPhone</label></li>
+    <h3>Phone brand</h3>
+    <h8 class = "opacity">This will give all the apps that are compatible for this brand</h8>
+      <ul class="ks-cboxtags" method="post">
+        <li><input type="checkbox" id="checkboxSixteen" value="Paid"><label for="checkboxSixteen">Samsung</label></li>
+        <li><input type="checkbox" id="checkboxSixteen" value="Paid"><label for="checkboxSixteen">Apple</label></li>
+        <li><input type="checkbox" id="checkboxSixteen" value="Paid"><label for="checkboxSixteen">Huawei</label></li>
+        <li><input type="checkbox" id="checkboxSeventeen" value="Free"><label for="checkboxSeventeen">Other</label></li>
       </ul>
 
       <h3>Price</h3>
-        <ul class="ks-cboxtags">
+        <ul class="ks-cboxtags" method="post">
           <li><input type="checkbox" id="checkboxSixteen" value="Paid"><label for="checkboxSixteen">Paid</label></li>
           <li><input type="checkbox" id="checkboxSeventeen" value="Free"><label for="checkboxSeventeen">Free</label></li>
         </ul>

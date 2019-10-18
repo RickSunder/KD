@@ -173,7 +173,9 @@ float: right
   color:#ffffff;
 	top:1px;
 }
-
+.go-back-button {
+  align-content: left;
+}
 /*Search BUTTON*/
 .grid-container {
   display: grid;
@@ -210,4 +212,8 @@ float: right
   font-size: 20px;
   float: right;
   margin: 5px;
+}
+
+.opacity{
+  opacity: 0.5;
 }
