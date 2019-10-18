@@ -2,15 +2,16 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
+    <form action="/results" method="post">
     <div class="column">
       <br><br>
       <h3>Category</h3>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxOne" value="games"><label for="checkboxOne">Games</label></li>
-          <li><input type="checkbox" id="checkboxTwo" value="Lifestyle" ><label for="checkboxTwo">Lifestyle</label></li>
-          <li><input type="checkbox" id="checkboxThree" value="Music" ><label for="checkboxThree">Music</label></li>
-          <li><input type="checkbox" id="checkboxFour" value="Shopping"><label for="checkboxFour">Shopping</label></li>
-          <li><input type="checkbox" id="checkboxFive" value="Entertainment"><label for="checkboxFive">Entertainment</label></li>
+          <li><input type="checkbox" id="checkboxOne" value="Games" name="Games"><label for="checkboxOne">Games</label></li>
+          <li><input type="checkbox" id="checkboxTwo" value="Lifestyle" name="Lifestyle" ><label for="checkboxTwo">Lifestyle</label></li>
+          <li><input type="checkbox" id="checkboxThree" value="Music" name="Music" ><label for="checkboxThree">Music</label></li>
+          <li><input type="checkbox" id="checkboxFour" value="Shopping" name="Shopping"><label for="checkboxFour">Shopping</label></li>
+          <li><input type="checkbox" id="checkboxFive" value="Entertainment" name="Entertainment"><label for="checkboxFive">Entertainment</label></li>
         </ul>
 
       <h3>Appsize</h3>
@@ -59,4 +60,5 @@
       <a href="{{ url_for('results') }}"><button id="button" class="myButton">Search</button></a>
 
   </div>
+  </form>
 </body>

@@ -1,4 +1,5 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
+import app
 
 def OperatorQuery(phone):
     """ Query dbpedia to check which operating system the users phone uses. 

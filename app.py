@@ -1,17 +1,22 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
+import data
+from SPARQLWrapper import SPARQLWrapper, JSON
+
 app = Flask(__name__)
 
 @app.route("/")
 def homepage():
     return render_template("homepage.html")
 
-@app.route("/results")
+@app.route("/results", methods=['POST'])
 def results():
-    return render_template("results.html")
+    checked = []
+    categories = ['Games', 'Lifestyle','Music','Shopping','Entertainment']
+    for category in categories:
+        if request.form.get(category):
+            checked.append(request.form[category])
+    return render_template("results.html", values = checked)
 
-# app.route()
-# def getvalues():
-#     category =request.form[]
 
 
 if __name__ == "__main__":
