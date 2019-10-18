@@ -6,6 +6,13 @@ def OperatorQuery(phone):
         If a result comes out of this query, we know the device uses Android;
         otherwise it should be a device that uses IOS as operating system."""
 
+    if phone == 'Other':
+        """ If the user has another Android phone than listed on the html page, the query
+        won't always work because of the range of dbpedia's database and different namings etc.
+        Therefore we display a button on the html page that's for other Android phones than listed;
+        these phones naturally run on Android."""
+        return 'Android'
+    
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     
     sparql.setQuery("""
