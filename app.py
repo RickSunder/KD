@@ -11,7 +11,8 @@ def homepage():
 @app.route("/results", methods=['POST'])
 def results():
     categories = get_category()
-    return render_template("results.html", categories = categories)
+    appsizes = get_appsize()
+    return render_template("results.html", categories = categories, appsizes = appsizes)
 
 def get_category():
     checked_categories = []
@@ -21,13 +22,13 @@ def get_category():
             checked_categories.append(request.form[category])
     return checked_categories
 
-def get_category():
-    checked_categories = []
-    categories = ['Games', 'Lifestyle','Music','Shopping','Entertainment']
-    for category in categories:
-        if request.form.get(category):
-            checked_categories.append(request.form[category])
-    return checked_categories
+def get_appsize():
+    checked_appsize = []
+    appsizes = ["0to50MB","50to100MB","100to250MB","250to500MB",'500+MB']
+    for appsize in appsizes:
+        if request.form.get(appsize):
+            checked_appsize.append(request.form[appsize])
+    return checked_appsize
 
 
 if __name__ == "__main__":

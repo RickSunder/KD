@@ -175,6 +175,7 @@ float: right
 }
 .go-back-button {
   align-content: left;
+  height: 90%
 }
 /*Search BUTTON*/
 .grid-container {
