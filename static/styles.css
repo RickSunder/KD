@@ -158,7 +158,7 @@ float: right
 	font-weight:bold;
   padding:13px 32px;
   padding-bottom: 50px
-	text-decoration:none;
+	text-decoration: none;
   text-shadow:0px 1px 0px #854629;
 }
 .myButton:hover {
@@ -175,3 +175,39 @@ float: right
 }
 
 /*Search BUTTON*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.grid-item {
+  background-color: #ffc3a0;
+  width: 200px;
+  height: 120px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.item-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.item-category{
+  font-size: 25px;
+  text-align: center;
+}
+
+.item-price{
+  font-size: 20px;
+  float: left;
+  margin: 5px;
+}
+
+.item-size{
+  font-size: 20px;
+  float: right;
+  margin: 5px;
+}
