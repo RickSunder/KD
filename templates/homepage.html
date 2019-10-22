@@ -8,27 +8,27 @@
       <br><br>
       <h3>Category</h3>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxOne" value="Games" name="Games"><label for="checkboxOne">Games</label></li>
-          <li><input type="checkbox" id="checkboxTwo" value="Lifestyle" name="Lifestyle" ><label for="checkboxTwo">Lifestyle</label></li>
-          <li><input type="checkbox" id="checkboxThree" value="Music" name="Music" ><label for="checkboxThree">Music</label></li>
-          <li><input type="checkbox" id="checkboxFour" value="Shopping" name="Shopping"><label for="checkboxFour">Shopping</label></li>
-          <li><input type="checkbox" id="checkboxFive" value="Entertainment" name="Entertainment"><label for="checkboxFive">Entertainment</label></li>
+          <li><input type="checkbox" id="checkboxOne" name="category" value="Games"><label for="checkboxOne">Games</label></li>
+          <li><input type="checkbox" id="checkboxTwo" name="category" value="Lifestyle"><label for="checkboxTwo">Lifestyle</label></li>
+          <li><input type="checkbox" id="checkboxThree" name="category" value="Music"><label for="checkboxThree">Music</label></li>
+          <li><input type="checkbox" id="checkboxFour" name="category" value="Shopping"><label for="checkboxFour">Shopping</label></li>
+          <li><input type="checkbox" id="checkboxFive" name="category" value="Entertainment"><label for="checkboxFive">Entertainment</label></li>
         </ul>
 
       <h3>Appsize</h3>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxSix" value="0to50MB" name="0to50MB"><label for="checkboxSix">0 to 50 MB</label></li>
-          <li><input type="checkbox" id="checkboxSeven" value="50to100MB" name="50to100MB"><label for="checkboxSeven">50 to 100 MB</label></li>
-          <li><input type="checkbox" id="checkboxEight" value="100to250MB" name="100to250MB"><label for="checkboxEight">100 to 250 MB</label></li>
-          <li><input type="checkbox" id="checkboxNine" value="250to500MB" name="250to500MB"><label for="checkboxNine">250 to 500 MB</label></li>
-          <li><input type="checkbox" id="checkboxTen" value="500+MB" name="500+MB"><label for="checkboxTen">500+ MB</label></li>
+          <li><input type="checkbox" id="checkboxSix" name="0to50MB" value="0to50MB"><label for="checkboxSix">0 to 50 MB</label></li>
+          <li><input type="checkbox" id="checkboxSeven" name="50to100MB" value="50to100MB"><label for="checkboxSeven">50 to 100 MB</label></li>
+          <li><input type="checkbox" id="checkboxEight" name="100to250MB" value="100to250MB"><label for="checkboxEight">100 to 250 MB</label></li>
+          <li><input type="checkbox" id="checkboxNine" name="250to500MB" value="250to500MB"><label for="checkboxNine">250 to 500 MB</label></li>
+          <li><input type="checkbox" id="checkboxTen" name="500+MB" value="500+MB"><label for="checkboxTen">500+ MB</label></li>
         </ul>
 
       <h3>Age</h3>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxEleven" value="Kids(-12)"><label for="checkboxEleven">Kids (-12)</label></li>
-          <li><input type="checkbox" id="checkboxTwelve" value="Teens(12-18)"><label for="checkboxTwelve">Teens(12-18)</label></li>
-          <li><input type="checkbox" id="checkboxThirteen" value="Adults(18+)" ><label for="checkboxThirteen">Adults(18+)</label></li>
+          <li><input type="checkbox" id="checkboxEleven" name="age" value="Kids(-12)"><label for="checkboxEleven">Kids (-12)</label></li>
+          <li><input type="checkbox" id="checkboxTwelve" name="age" value="Teens(12-18)"><label for="checkboxTwelve">Teens(12-18)</label></li>
+          <li><input type="checkbox" id="checkboxThirteen" name="age" value="Adults(18+)" ><label for="checkboxThirteen">Adults(18+)</label></li>
         </ul>
 
     <h3>Minimum Rating</h3>
@@ -41,19 +41,21 @@
           <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
         </fieldset>
       </ul><br>
+    
     <h3>Phone brand</h3>
     <h8 class = "opacity">This will give all the apps that are compatible for this brand</h8>
       <ul class="ks-cboxtags" method="post">
-        <li><input id="checkboxFourteen" type="checkbox" name="check" onclick="onlyOne(this)"><label for="checkboxFourteen">Apple</label></li>
-        <li><input id="checkboxFiveteen"type="checkbox" name="check" onclick="onlyOne(this)"><label for="checkboxFiveteen">Samsung</label></li>
-        <li><input id="checkboxSixteen"type="checkbox" name="check" onclick="onlyOne(this)"><label for="checkboxSixteen">Huawei</label></li>
-        <li><input id="checkboxSeventeen"type="checkbox" name="check" onclick="onlyOne(this)"><label for="checkboxSeventeen">Other</label></li>
+        <li><input id="checkboxFourteen" type="checkbox" name="brand" onclick="onlyOne(this)" value="Apple"><label for="checkboxFourteen">Apple</label></li>
+        <li><input id="checkboxFiveteen"type="checkbox" name="brand" onclick="onlyOne(this)" value="Samsung"><label for="checkboxFiveteen">Samsung</label></li>
+        <li><input id="checkboxSixteen"type="checkbox" name="brand" onclick="onlyOne(this)" value="Huawei"><label for="checkboxSixteen">Huawei</label></li>
+        <li><input id="checkboxSeventeen"type="checkbox" name="brand" onclick="onlyOne(this)" value="Xiaomi"><label for="checkboxSeventeen">Xiaomi</label></li>
+        <li><input id="checkboxEighteen"type="checkbox" name="brand" onclick="onlyOne(this)" value="Other"><label for="checkboxEighteen">Other Android phone</label></li>
       </ul>
 
       <h3>Price</h3>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxSixteen" value="Paid"><label for="checkboxEighteen">Paid</label></li>
-          <li><input type="checkbox" id="checkboxSeventeen" value="Free"><label for="checkboxNineteen">Free</label></li>
+          <li><input type="checkbox" id="checkboxNineteen" name="price" value="Paid"><label for="checkboxNineteen">Paid</label></li>
+          <li><input type="checkbox" id="checkboxTwenty" name="price" value="Free"><label for="checkboxTwenty">Free</label></li>
         </ul>
       
         

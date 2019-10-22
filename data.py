@@ -37,5 +37,3 @@ def OperatorQuery(phone):
         return 'Android'
     else:
         return 'IOS'
-
-print(OperatorQuery('ZTE'))

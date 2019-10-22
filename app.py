@@ -12,23 +12,20 @@ def homepage():
 def results():
     categories = get_category()
     appsizes = get_appsize()
+    phone_brand = request.form.get("brand")
+    operator = data.OperatorQuery(phone_brand)
     return render_template("results.html", categories = categories, appsizes = appsizes)
 
 def get_category():
-    checked_categories = []
     categories = ['Games', 'Lifestyle','Music','Shopping','Entertainment']
-    for category in categories:
-        if request.form.get(category):
-            checked_categories.append(request.form[category])
-    return checked_categories
+    return [request.form[category] for category in categories if request.form.get(category)]
 
 def get_appsize():
-    checked_appsize = []
     appsizes = ["0to50MB","50to100MB","100to250MB","250to500MB",'500+MB']
-    for appsize in appsizes:
-        if request.form.get(appsize):
-            checked_appsize.append(request.form[appsize])
-    return checked_appsize
+    return [request.form[appsize] for appsize in appsizes if request.form.get(appsize)]
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
 if __name__ == "__main__":
