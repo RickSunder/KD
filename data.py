@@ -40,36 +40,3 @@ def OperatorQuery(phone):
 
 
 
-
-
-
-def OperatorQuery(phone):
-
-    if phone == 'Other':
-        return 'Android'
-    
-    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
-    
-    sparql.setQuery("""
-        PREFIX dct: <http://purl.org/dc/terms/>
-        PREFIX dbr: <http://dbpedia.org/resource/>
-        PREFIX dbo: <http://dbpedia.org/ontology/>
-
-        SELECT *
-        WHERE {
-        ?phone dbo:manufacturer dbr:%s . 
-        ?phone dbo:operatingSystem ?operator .
-        ?operator dct:subject <http://dbpedia.org/resource/Category:Android_(operating_system)>
-        }
-    """%phone) 
-    
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-
-    results = [result["operator"]["value"] for result in results["results"]["bindings"]]
-    if results:
-        return 'Android'
-    else:
-        return 'IOS'
-
-

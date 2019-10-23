@@ -7,28 +7,39 @@
     <div class="column">
       <br><br>
       <h3>Category</h3>
+      <h8 class = "opacity">(Filling in nothing will take every category into account)</h8>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxOne" name="category" value="Games"><label for="checkboxOne">Games</label></li>
-          <li><input type="checkbox" id="checkboxTwo" name="category" value="Lifestyle"><label for="checkboxTwo">Lifestyle</label></li>
-          <li><input type="checkbox" id="checkboxThree" name="category" value="Music"><label for="checkboxThree">Music</label></li>
-          <li><input type="checkbox" id="checkboxFour" name="category" value="Shopping"><label for="checkboxFour">Shopping</label></li>
-          <li><input type="checkbox" id="checkboxFive" name="category" value="Entertainment"><label for="checkboxFive">Entertainment</label></li>
+          <li><input type="checkbox" id="checkboxOne" name="Education" value="Education"><label for="checkboxOne">Education</label></li>
+          <li><input type="checkbox" id="checkboxTwo" name="Entertainment" value="Entertainment"><label for="checkboxTwo">Entertainment</label></li>
+          <li><input type="checkbox" id="checkboxThree" name="Finance" value="Finance"><label for="checkboxThree">Finance</label></li>
+          <li><input type="checkbox" id="checkboxFour" name="Games" value="Games"><label for="checkboxFour">Games</label></li>
+          <br>
+          <li><input type="checkbox" id="checkboxFive" name="Lifestyle & Health" value="Lifestyle & Health"><label for="checkboxFive">Lifestyle & Health</label></li>
+          <li><input type="checkbox" id="checkboxSix" name="Music" value="Music"><label for="checkboxSix">Music</label></li>
+          <li><input type="checkbox" id="checkboxSeven" name="Navigation & Travel" value="Navigation & Travel"><label for="checkboxSeven">Navigation & Travel</label></li>
+          <li><input type="checkbox" id="checkboxEight" name="News & Sports" value="News & Sports"><label for="checkboxEight">News & Sports</label></li>
+          <br>
+          <li><input type="checkbox" id="checkboxNine" name="Photo & Video" value="Photo & Video"><label for="checkboxNine">Photo & Video</label></li>
+          <li><input type="checkbox" id="checkboxTen" name="Reading" value="Reading"><label for="checkboxTen">Reading</label></li>
+          <li><input type="checkbox" id="checkboxEleven" name="Shopping" value="Shopping"><label for="checkboxEleven">Shopping</label></li>
+          <li><input type="checkbox" id="checkboxTwelve" name="Social Networking" value="Social Networking"><label for="checkboxTwelve">Social Networking</label></li>
+          <li><input type="checkbox" id="checkboxThirteen" name="Tools" value="Tools"><label for="checkboxThirteen">Tools</label></li>
         </ul>
 
-      <h3>Appsize</h3>
+      <h3>App size</h3>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxSix" name="0to50MB" value="0to50MB"><label for="checkboxSix">0 to 50 MB</label></li>
-          <li><input type="checkbox" id="checkboxSeven" name="50to100MB" value="50to100MB"><label for="checkboxSeven">50 to 100 MB</label></li>
-          <li><input type="checkbox" id="checkboxEight" name="100to250MB" value="100to250MB"><label for="checkboxEight">100 to 250 MB</label></li>
-          <li><input type="checkbox" id="checkboxNine" name="250to500MB" value="250to500MB"><label for="checkboxNine">250 to 500 MB</label></li>
-          <li><input type="checkbox" id="checkboxTen" name="500+MB" value="500+MB"><label for="checkboxTen">500+ MB</label></li>
+          <li><input type="checkbox" id="checkboxFourteen" name="0to50MB" value="0to50MB"><label for="checkboxFourteen">0 to 50 MB</label></li>
+          <li><input type="checkbox" id="checkboxFiveteen" name="50to100MB" value="50to100MB"><label for="checkboxFiveteen">50 to 100 MB</label></li>
+          <li><input type="checkbox" id="checkboxSixeteen" name="100to250MB" value="100to250MB"><label for="checkboxSixteen">100 to 250 MB</label></li>
+          <li><input type="checkbox" id="checkboxSeventeen" name="250to500MB" value="250to500MB"><label for="checkboxSeventeen">250 to 500 MB</label></li>
+          <li><input type="checkbox" id="checkboxEighteen" name="500+MB" value="500+MB"><label for="checkboxEighteen">500+ MB</label></li>
         </ul>
 
       <h3>Age</h3>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxEleven" name="Kids(-12)" value="Kids(-12)"><label for="checkboxEleven">Kids (-12)</label></li>
-          <li><input type="checkbox" id="checkboxTwelve" name="Teens(12-18)" value="Teens(12-18)"><label for="checkboxTwelve">Teens(12-18)</label></li>
-          <li><input type="checkbox" id="checkboxThirteen" name="Adults(18+)" value="Adults(18+)" ><label for="checkboxThirteen">Adults(18+)</label></li>
+          <li><input type="checkbox" id="checkboxNineteen" name="Kids(-12)" value="Kids(-12)"><label for="checkboxNineteen">Kids (-12)</label></li>
+          <li><input type="checkbox" id="checkboxTwenty" name="Teens(12-18)" value="Teens(12-18)"><label for="checkboxTwenty">Teens(12-18)</label></li>
+          <li><input type="checkbox" id="checkboxTwentyone" name="Adults(18+)" value="Adults(18+)" ><label for="checkboxTwentyone">Adults(18+)</label></li>
         </ul>
 
     <h3>Minimum Rating</h3>
@@ -45,11 +56,11 @@
     <h3>Phone brand</h3>
     <h8 class = "opacity">This will give all the apps that are compatible for this brand</h8>
       <ul class="ks-cboxtags" method="post">
-        <li><input id="checkboxFourteen" type="checkbox" name="brand" value="Apple" onclick="onlyOne(this)" value="Apple"><label for="checkboxFourteen">Apple</label></li>
-        <li><input id="checkboxFiveteen"type="checkbox" name="brand" value="Samsung" onclick="onlyOne(this)" value="Samsung"><label for="checkboxFiveteen">Samsung</label></li>
-        <li><input id="checkboxSixteen"type="checkbox" name="brand" value="Huawei" onclick="onlyOne(this)" value="Huawei"><label for="checkboxSixteen">Huawei</label></li>
-        <li><input id="checkboxSeventeen"type="checkbox" name="brand" value="Xiaomi" onclick="onlyOne(this)" value="Xiaomi"><label for="checkboxSeventeen">Xiaomi</label></li>
-        <li><input id="checkboxEighteen"type="checkbox" name="brand" value="Other" onclick="onlyOne(this)" value="Other"><label for="checkboxEighteen">Other Android phone</label></li>
+        <li><input id="checkboxTwentytwo" type="checkbox" name="brand" value="Apple" onclick="onlyOne(this)" value="Apple"><label for="checkboxTwentytwo">Apple</label></li>
+        <li><input id="checkboxTwentythree"type="checkbox" name="brand" value="Samsung" onclick="onlyOne(this)" value="Samsung"><label for="checkboxTwentythree">Samsung</label></li>
+        <li><input id="checkboxTwentyfour"type="checkbox" name="brand" value="Huawei" onclick="onlyOne(this)" value="Huawei"><label for="checkboxTwentyfour">Huawei</label></li>
+        <li><input id="checkboxTwentyfive"type="checkbox" name="brand" value="Xiaomi" onclick="onlyOne(this)" value="Xiaomi"><label for="checkboxTwentyfive">Xiaomi</label></li>
+        <li><input id="checkboxTwentysix"type="checkbox" name="brand" value="Other" onclick="onlyOne(this)" value="Other"><label for="checkboxTwentysix">Other Android phone</label></li>
       </ul>
 
       <h3>Price</h3>
