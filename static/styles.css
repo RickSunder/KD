@@ -11,7 +11,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background: #ffc3a0;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffc3a0, #ffafbd);
@@ -23,8 +22,9 @@ body {
 
 .container {
     max-width: 640px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 13px;
+    float:middle;
+    align-content: center;
+    display: flex;
 }
 
 ul.ks-cboxtags {
@@ -99,7 +99,8 @@ ul.ks-cboxtags li input[type="checkbox"] {
 float: middle;
 background-color: white;
 padding: 0px 0px 50px 0px;
-margin: auto;
+margin: 0 auto;
+max-width: 100%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 text-align: center;
 }
