@@ -16,9 +16,11 @@ def results():
     brands = get_brand()
     ages = get_ages()
     rating = get_rating()
+    price = get_price()
 
     #operator = data.OperatorQuery(phone_brand)
-    return render_template("results.html", categories = categories, appsizes = appsizes, brands = brands, ages = ages, rating = rating)
+    return render_template("results.html", categories = categories, appsizes = appsizes, brands = brands, ages = ages, rating = rating, price = price)
+
 
 def get_category():
     categories = ['Games', 'Lifestyle','Music','Shopping','Entertainment']
@@ -39,10 +41,9 @@ def get_brand():
     brands = ["Apple", "Samsung", "Huawei", "Xiaomi", "Other"]
     return [request.form[brand] for brand in brands if request.form.get(brand)]
 
+def get_price():
+    return [request.form[price] for price in ["Paid", "Free"] if request.form.get(price)]
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
 
 
 if __name__ == "__main__":
