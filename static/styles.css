@@ -96,6 +96,7 @@ ul.ks-cboxtags li input[type="checkbox"] {
 
 /* Create three equal columns that floats next to each other */
 .column {
+border-radius: 10px;
 min-width: 800px;
 float: middle;
 background-color: white;
