@@ -38,7 +38,7 @@ def OperatorQuery(phone):
     else:
         return 'IOS'
 
-def results_query(operator, category, size, rating):
+def results_query(operator, category, size, rating, age, price):
     if operator == 'Android':
         operator_query = '?app a pr:AndroidApp .'
     elif operator == 'Apple':
@@ -51,7 +51,17 @@ def results_query(operator, category, size, rating):
     else:
         category_query = ''
 
-    query_variables = (operator_query, category_query, size[0], size[1], rating)
+    if age:
+        age_query = '?app a pr:%s .'%age
+    else:
+        age_query = ''
+
+    if price == 'Free':
+        price_query = '?app a odapp:FreeApp .'
+    else:
+        price_query = ''
+
+    query_variables = (operator_query, category_query, size[0], size[1], rating, age_query, price_query)
 
     sparql = SPARQLWrapper("http://localhost:7200/repositories/KaDPROJECT")
 
@@ -69,6 +79,9 @@ def results_query(operator, category, size, rating):
             FILTER(?size >= %s && ?size <= %s)
             ?app pr:hasUserRating ?userrating
             FILTER(?userrating >= %s)
+            %s
+            ?app pr:hasName ?name .
+            %s 
         }
     """%query_variables)
 

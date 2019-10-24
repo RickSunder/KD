@@ -10,7 +10,7 @@ def homepage():
 
 @app.route("/results", methods=['POST'])
 def results():
-    #getting the information given from the user
+    ''' getting the information given from the user '''
     categories = get_category()
     size_limit = get_appsize()
     brand = get_brand()
@@ -19,12 +19,12 @@ def results():
     price = get_price()
     operator = data.OperatorQuery(brand)
     
-    print(data.results_query(operator, categories, size_limit, rating))
+    print(data.results_query(operator, categories, size_limit, rating, ages, price))
     return render_template("results.html", categories = categories, appsizes = size_limit, brands = brand, ages = ages, rating = rating, price = price)
 
 
 def get_category():
-    categories = ['education', 'Entertainment', 'Finance', 'Games', 'Lifestyle & Helth', 
+    categories = ['Education', 'Entertainment', 'Finance', 'Games', 'Lifestyle & Health', 
     'Music', 'Navigation & Travel', 'News & Sports', 'Photo & VIdeo', 'Reading', 
     'Shopping','Social Networking', 'Tools']
     if request.form.get('category'):
@@ -43,8 +43,8 @@ def get_appsize():
         return ['0', '10000']
 
 def get_ages():
-    ages = ["Kids(-12)","Teens(12-18)","Adults(18+)"]
-    return [request.form[age] for age in ages if request.form.get(age)]
+    ages = request.form.get('age')
+    return ages
 
 def get_rating():
     rating = request.form.get('rating')
@@ -53,11 +53,13 @@ def get_rating():
     return rating
 
 def get_brand():
-    return request.form.get("brand")
+    return request.form.get('brand')
 
 def get_price():
-    return [request.form[price] for price in ["Paid", "Free"] if request.form.get(price)]
-
+    price = request.form.get('price')
+    if not price:
+        price = 'Irrelevant'
+    return price
 
 if __name__ == "__main__":
     app.run(debug=True)
