@@ -38,5 +38,35 @@ def OperatorQuery(phone):
     else:
         return 'IOS'
 
+def results_query(size, operator):
+    if operator == 'Android':
+        operator_query = 'pr:AndroidApp'
+    else:
+        operator_query = 'pr:AppleApp'
+    
+    if price == 'Free':
+        price_query = '?app a odapp:FreeApp .'
+    else:
+        price_query = ''
 
+    query_variables = (operator_query, price_query)
+    sparql = SPARQLWrapper("http://localhost:7200/repositories/KaDPROJECT")
 
+    sparql.setQuery("""
+        PREFIX dbo: <http://dbpedia.org/ontology/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX pr: <http://www.project2.nl/>
+        PREFIX odapp: <http://vocab.deri.ie/odapp#>
+        
+        SELECT *
+        WHERE {
+            ?app a %s .
+            %s
+        }
+    """%query_variables)
+
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+
+    results = [result["app"]["value"] for result in results["results"]["bindings"]]
+    return results

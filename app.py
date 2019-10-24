@@ -12,14 +12,14 @@ def homepage():
 def results():
     #getting the information given from the user
     categories = get_category()
-    appsizes = get_appsize()
+    size_limit = get_appsize()
     brands = get_brand()
     ages = get_ages()
     rating = get_rating()
     price = get_price()
-
+    print(size_limit)
     #operator = data.OperatorQuery(brands)
-    return render_template("results.html", categories = categories, appsizes = appsizes, brands = brands, ages = ages, rating = rating, price = price)
+    return render_template("results.html", categories = categories, appsizes = size_limit, brands = brands, ages = ages, rating = rating, price = price)
 
 
 def get_category():
@@ -29,8 +29,12 @@ def get_category():
     return [request.form[category] for category in categories if request.form.get(category)]
 
 def get_appsize():
-    appsizes = ["0to50MB","50to100MB","100to250MB","250to500MB",'500+MB']
-    return [request.form[appsize] for appsize in appsizes if request.form.get(appsize)]
+    appsizes = ["0-50","50-100","100-250","250-500",'500-10000']
+    size_request = [request.form[appsize] for appsize in appsizes if request.form.get(appsize)]
+    if size_request:
+        return size_request[0].split('-')
+    else:
+        return ['0', '10000']
 
 def get_ages():
     ages = ["Kids(-12)","Teens(12-18)","Adults(18+)"]
