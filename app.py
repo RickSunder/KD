@@ -23,7 +23,9 @@ def results():
 
 
 def get_category():
-    categories = ['Games', 'Lifestyle','Music','Shopping','Entertainment']
+    categories = ['education', 'Entertainment', 'Finance', 'Games', 'Lifestyle & Helth', 
+    'Music', 'Navigation & Travel', 'News & Sports', 'Photo & VIdeo', 'Reading', 
+    'Shopping','Social Networking', 'Tools']
     return [request.form[category] for category in categories if request.form.get(category)]
 
 def get_appsize():
