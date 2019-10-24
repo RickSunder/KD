@@ -236,8 +236,7 @@ details summary {
   padding: 5px 10px;
   position: relative;
   cursor: pointer;
-  font-family: Rajdhani;
-  color: #275d38;
+  color: #000000;
   font-size: 24px;
 }
 details summary::-webkit-details-marker {
@@ -247,8 +246,7 @@ details summary:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  content: '\f0fe';
-  font-family: FontAwesome;
+  content: '+';
   font-size: 90%;
   position: absolute;
   top: 0;
@@ -256,7 +254,8 @@ details summary:before {
   right: 0;
   width: 30px;
   color: #fff;
-  background-color: #285d39;
+  background: -webkit-linear-gradient(to left, hsl(22, 100%, 81%), #ffafbd);
+	background: linear-gradient(to left, #ffc3a0, #ffafbd);
 }
 details > :not(summary) {
   padding: 10px;
