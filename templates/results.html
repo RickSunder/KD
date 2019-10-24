@@ -7,14 +7,12 @@
     <div class="column">
     <h3>Results:</h3>
         {% for category in categories %}
-        <div class="grid-container">
-            <div class="grid-item">
-                <div class="item-title">Title</div>
-                <div class="item-category">{{ category }}</div>
-                <div class="item-price">{{ price }}</div>
-                <div class="item-size">{{ appsizes }}</div>
-            </div>
-        </div>
+        <details>
+                <summary>{{ category }}</summary>
+                <div>
+                    <p>{{ category}}: Test</p>
+                </div>
+            </details>
         {% endfor %}
     </div>
 </body>

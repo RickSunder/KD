@@ -9,21 +9,21 @@
       <h3>Category</h3>
       <h8 class = "opacity">(Filling in nothing will take every category into account)</h8>
         <ul class="ks-cboxtags" method="post">
-          <li><input type="checkbox" id="checkboxOne" name="Education" value="Education"><label for="checkboxOne">Education</label></li>
-          <li><input type="checkbox" id="checkboxTwo" name="Entertainment" value="Entertainment"><label for="checkboxTwo">Entertainment</label></li>
-          <li><input type="checkbox" id="checkboxThree" name="Finance" value="Finance"><label for="checkboxThree">Finance</label></li>
-          <li><input type="checkbox" id="checkboxFour" name="Games" value="Games"><label for="checkboxFour">Games</label></li>
+          <li><input type="checkbox" id="checkboxOne" name="category" onclick="onlyCategory(this)" value="Education" ><label for="checkboxOne">Education</label></li>
+          <li><input type="checkbox" id="checkboxTwo" name="category" onclick="onlyCategory(this)" value="Entertainment" ><label for="checkboxTwo">Entertainment</label></li>
+          <li><input type="checkbox" id="checkboxThree" name="category" onclick="onlyCategory(this)" value="Finance" ><label for="checkboxThree">Finance</label></li>
+          <li><input type="checkbox" id="checkboxFour" name="category" onclick="onlyCategory(this)" value="Games" ><label for="checkboxFour">Games</label></li>
           <br>
-          <li><input type="checkbox" id="checkboxFive" name="Lifestyle & Health" value="Lifestyle & Health"><label for="checkboxFive">Lifestyle & Health</label></li>
-          <li><input type="checkbox" id="checkboxSix" name="Music" value="Music"><label for="checkboxSix">Music</label></li>
-          <li><input type="checkbox" id="checkboxSeven" name="Navigation & Travel" value="Navigation & Travel"><label for="checkboxSeven">Navigation & Travel</label></li>
-          <li><input type="checkbox" id="checkboxEight" name="News & Sports" value="News & Sports"><label for="checkboxEight">News & Sports</label></li>
+          <li><input type="checkbox" id="checkboxFive" name="category" onclick="onlyCategory(this)" value="Lifestyle & Health" ><label for="checkboxFive">Lifestyle & Health</label></li>
+          <li><input type="checkbox" id="checkboxSix" name="category" onclick="onlyCategory(this)" value="Music"><label for="checkboxSix" >Music</label></li>
+          <li><input type="checkbox" id="checkboxSeven" name="category" onclick="onlyCategory(this)" value="Navigation & Travel" ><label for="checkboxSeven">Navigation & Travel</label></li>
+          <li><input type="checkbox" id="checkboxEight" name="category" onclick="onlyCategory(this)" value="News & Sports" ><label for="checkboxEight">News & Sports</label></li>
           <br>
-          <li><input type="checkbox" id="checkboxNine" name="Photo & Video" value="Photo & Video"><label for="checkboxNine">Photo & Video</label></li>
-          <li><input type="checkbox" id="checkboxTen" name="Reading" value="Reading"><label for="checkboxTen">Reading</label></li>
-          <li><input type="checkbox" id="checkboxEleven" name="Shopping" value="Shopping"><label for="checkboxEleven">Shopping</label></li>
-          <li><input type="checkbox" id="checkboxTwelve" name="Social Networking" value="Social Networking"><label for="checkboxTwelve">Social Networking</label></li>
-          <li><input type="checkbox" id="checkboxThirteen" name="Tools" value="Tools"><label for="checkboxThirteen">Tools</label></li>
+          <li><input type="checkbox" id="checkboxNine" name="category" onclick="onlyCategory(this)" value="Photo & Video" ><label for="checkboxNine">Photo & Video</label></li>
+          <li><input type="checkbox" id="checkboxTen" name="category" onclick="onlyCategory(this)" value="Reading" ><label for="checkboxTen">Reading</label></li>
+          <li><input type="checkbox" id="checkboxEleven" name="category" onclick="onlyCategory(this)" value="Shopping" ><label for="checkboxEleven">Shopping</label></li>
+          <li><input type="checkbox" id="checkboxTwelve" name="category" onclick="onlyCategory(this)" value="Social Networking" ><label for="checkboxTwelve">Social Networking</label></li>
+          <li><input type="checkbox" id="checkboxThirteen" name="category" onclick="onlyCategory(this)" value="Tools" ><label for="checkboxThirteen">Tools</label></li>
         </ul>
 
       <h3>App size</h3>
@@ -56,11 +56,11 @@
     <h3>Phone brand</h3>
     <h8 class = "opacity">This will give all the apps that are compatible for this brand</h8>
       <ul class="ks-cboxtags" method="post">
-        <li><input id="checkboxTwentytwo" type="checkbox" name="brand" value="Apple" onclick="onlyOne(this)" value="Apple"><label for="checkboxTwentytwo">Apple</label></li>
-        <li><input id="checkboxTwentythree"type="checkbox" name="brand" value="Samsung" onclick="onlyOne(this)" value="Samsung"><label for="checkboxTwentythree">Samsung</label></li>
-        <li><input id="checkboxTwentyfour"type="checkbox" name="brand" value="Huawei" onclick="onlyOne(this)" value="Huawei"><label for="checkboxTwentyfour">Huawei</label></li>
-        <li><input id="checkboxTwentyfive"type="checkbox" name="brand" value="Xiaomi" onclick="onlyOne(this)" value="Xiaomi"><label for="checkboxTwentyfive">Xiaomi</label></li>
-        <li><input id="checkboxTwentysix"type="checkbox" name="brand" value="Other" onclick="onlyOne(this)" value="Other"><label for="checkboxTwentysix">Other Android phone</label></li>
+        <li><input id="checkboxTwentytwo" type="checkbox" name="brand"  onclick="onlyBrand(this)" value="Apple"><label for="checkboxTwentytwo">Apple</label></li>
+        <li><input id="checkboxTwentythree"type="checkbox" name="brand"  onclick="onlyBrand(this)" value="Samsung"><label for="checkboxTwentythree">Samsung</label></li>
+        <li><input id="checkboxTwentyfour"type="checkbox" name="brand"  onclick="onlyBrand(this)" value="Huawei"><label for="checkboxTwentyfour">Huawei</label></li>
+        <li><input id="checkboxTwentyfive"type="checkbox" name="brand"  onclick="onlyBrand(this)" value="Xiaomi"><label for="checkboxTwentyfive">Xiaomi</label></li>
+        <li><input id="checkboxTwentysix"type="checkbox" name="brand"  onclick="onlyBrand(this)" value="Other"><label for="checkboxTwentysix">Other Android phone</label></li>
       </ul>
 
       <h3>Price</h3>

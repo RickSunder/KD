@@ -96,6 +96,7 @@ ul.ks-cboxtags li input[type="checkbox"] {
 
 /* Create three equal columns that floats next to each other */
 .column {
+min-width: 800px;
 float: middle;
 background-color: white;
 padding: 0px 0px 50px 0px;
@@ -218,4 +219,55 @@ float: right
 
 .opacity{
   opacity: 0.5;
+}
+
+
+
+/*Results*/
+details {
+  max-width: 350px;
+  margin: 50px auto;
+  background-color: #ddd;
+}
+details summary {
+  list-style: none;
+  display: block;
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  position: relative;
+  cursor: pointer;
+  font-family: Rajdhani;
+  color: #275d38;
+  font-size: 24px;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: '\f0fe';
+  font-family: FontAwesome;
+  font-size: 90%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  color: #fff;
+  background-color: #285d39;
+}
+details > :not(summary) {
+  padding: 10px;
+  background-color: #fff;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 300ms;
+}
+details[open] summary:before {
+  content: '\f146';
+}
+details[open] > :not(summary) {
+  transform: scaleY(1);
 }
