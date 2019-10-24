@@ -39,7 +39,7 @@ def OperatorQuery(phone):
     else:
         return 'IOS'
 
-def results_query(operator, category, size, rating, age, price):
+def ResultsQuery(operator, category, size, rating, age, price):
     """ Query our own ontology in our local GraphDB SPARQL endpoint. The query depends 
         on what the user wants the application to filter. If the user doesn't particularly 
         filters on an aspect, this won't be filled in in the query.
