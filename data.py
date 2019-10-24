@@ -1,4 +1,5 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
+import urllib.parse
 import app
 
 def OperatorQuery(phone):
@@ -93,8 +94,8 @@ def results_query(operator, category, size, rating, age, price):
     
     app_list = []
     for result in results["results"]["bindings"]:
-        app_list.append({'name' : result['name']['value'], 'currency' : result['currency']['value'], 'price' : result['price']['value'],
-         'size' : result['size']['value'], 'user_rating' : result['userrating']['value'], 
-         'numb_ratings' : result['numb_ratings']['value']})
+        app_list.append({'name' : urllib.parse.unquote(result['name']['value'][23:]), 'currency' : urllib.parse.unquote(result['currency']['value'][23:]), 'price' : urllib.parse.unquote(result['price']['value'][23:]),
+         'size' : urllib.parse.unquote(result['size']['value']), 'user_rating' : urllib.parse.unquote(result['userrating']['value']), 
+         'numb_ratings' : urllib.parse.unquote(result['numb_ratings']['value'])})
     
     return app_list

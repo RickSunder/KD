@@ -18,9 +18,10 @@ def results():
     rating = get_rating()
     price = get_price()
     operator = data.OperatorQuery(brand)
-    
-    print(data.results_query(operator, categories, size_limit, rating, ages, price))
-    return render_template("results.html", categories = categories, appsizes = size_limit, brands = brand, ages = ages, rating = rating, price = price)
+
+    app_list = data.results_query(operator, categories, size_limit, rating, ages, price)
+    print(app_list)
+    return render_template("results.html", categories = categories, appsizes = size_limit, brands = brand, ages = ages, rating = rating, price = price, app_list=app_list)
 
 
 def get_category():

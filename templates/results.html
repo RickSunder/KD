@@ -6,11 +6,16 @@
     </div>
     <div class="column">
     <h3>Results:</h3>
+    {% for app in app_list %}
         <details>
-                <summary>{{ categories }}</summary>
+                <summary>{{ app['name'] }}</summary>
                 <div>
-                    <p>{{ categories }}: Test</p>
+                    <p>Price: {{ app['price'] }} {{ app['currency'] }}</p>
+                    <p>App size: {{ app['size'] }}MB</p>
+                    <p>Rating: {{ app['user_rating'] }}</p>
+                    <p>Rated by {{ app['numb_ratings'] }} people</p>
                 </div>
             </details>
+            {% endfor %}
     </div>
 </body>
