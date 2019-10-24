@@ -80,13 +80,21 @@ def results_query(operator, category, size, rating, age, price):
             ?app pr:hasUserRating ?userrating
             FILTER(?userrating >= %s)
             %s
-            ?app pr:hasName ?name .
             %s 
+            ?app pr:hasName ?name .
+            ?app pr:hasPrice ?price .
+            ?app pr:hasNumberOfRatings ?numb_ratings .
+            ?app pr:hasCurrency ?currency .
         }
     """%query_variables)
 
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
     
-    results = [(result["app"]["value"], result["size"]["value"]) for result in results["results"]["bindings"]]
-    return results
+    app_list = []
+    for result in results["results"]["bindings"]:
+        app_list.append({'name' : result['name']['value'], 'currency' : result['currency']['value'], 'price' : result['price']['value'],
+         'size' : result['size']['value'], 'user_rating' : result['userrating']['value'], 
+         'numb_ratings' : result['numb_ratings']['value']})
+    
+    return app_list
