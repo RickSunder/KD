@@ -19,7 +19,7 @@ def results():
     price = get_price()
     operator = data.OperatorQuery(brand)
 
-    app_list = data.results_query(operator, categories, size_limit, rating, ages, price)
+    app_list = data.ResultsQuery(operator, categories, size_limit, rating, ages, price)
     print(app_list)
     return render_template("results.html", categories = categories, appsizes = size_limit, brands = brand, ages = ages, rating = rating, price = price, app_list=app_list)
 
