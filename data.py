@@ -38,18 +38,19 @@ def OperatorQuery(phone):
     else:
         return 'IOS'
 
-def results_query(size, operator):
+def results_query(operator, category, size):
     if operator == 'Android':
         operator_query = 'pr:AndroidApp'
     else:
         operator_query = 'pr:AppleApp'
     
-    if price == 'Free':
-        price_query = '?app a odapp:FreeApp .'
+    if type(category) == str:
+        category_query = '?app a pr:%s .'%category
     else:
-        price_query = ''
+        category_query = ''
 
-    query_variables = (operator_query, price_query)
+    query_variables = (operator_query, category_query, size[0], size[1])
+
     sparql = SPARQLWrapper("http://localhost:7200/repositories/KaDPROJECT")
 
     sparql.setQuery("""
@@ -62,11 +63,13 @@ def results_query(size, operator):
         WHERE {
             ?app a %s .
             %s
+            ?app pr:hasSize ?size
+            FILTER(?size > %s && ?size < %s)
         }
     """%query_variables)
 
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
-
-    results = [result["app"]["value"] for result in results["results"]["bindings"]]
+    
+    results = [(result["app"]["value"], result["size"]["value"]) for result in results["results"]["bindings"]]
     return results

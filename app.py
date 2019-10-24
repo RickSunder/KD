@@ -13,13 +13,14 @@ def results():
     #getting the information given from the user
     categories = get_category()
     size_limit = get_appsize()
-    brands = get_brand()
+    brand = get_brand()
     ages = get_ages()
     rating = get_rating()
     price = get_price()
-    print(size_limit)
-    #operator = data.OperatorQuery(brands)
-    return render_template("results.html", categories = categories, appsizes = size_limit, brands = brands, ages = ages, rating = rating, price = price)
+    operator = data.OperatorQuery(brand)
+    
+    print(data.results_query(operator, categories, size_limit))
+    return render_template("results.html", categories = categories, appsizes = size_limit, brands = brand, ages = ages, rating = rating, price = price)
 
 
 def get_category():
@@ -49,8 +50,7 @@ def get_rating():
     return [request.form[rating] for rating in range(1,6) if request.form.get(rating)]
 
 def get_brand():
-    brands = ["Apple", "Samsung", "Huawei", "Xiaomi", "Other"]
-    return [request.form[brand] for brand in brands if request.form.get(brand)]
+    return request.form.get("brand")
 
 def get_price():
     return [request.form[price] for price in ["Paid", "Free"] if request.form.get(price)]
