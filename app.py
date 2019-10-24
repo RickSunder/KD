@@ -19,7 +19,7 @@ def results():
     price = get_price()
     operator = data.OperatorQuery(brand)
     
-    print(data.results_query(operator, categories, size_limit))
+    print(data.results_query(operator, categories, size_limit, rating))
     return render_template("results.html", categories = categories, appsizes = size_limit, brands = brand, ages = ages, rating = rating, price = price)
 
 
@@ -47,7 +47,10 @@ def get_ages():
     return [request.form[age] for age in ages if request.form.get(age)]
 
 def get_rating():
-    return [request.form[rating] for rating in range(1,6) if request.form.get(rating)]
+    rating = request.form.get('rating')
+    if not rating:
+        rating = 1
+    return rating
 
 def get_brand():
     return request.form.get("brand")
