@@ -26,7 +26,12 @@ def get_category():
     categories = ['education', 'Entertainment', 'Finance', 'Games', 'Lifestyle & Helth', 
     'Music', 'Navigation & Travel', 'News & Sports', 'Photo & VIdeo', 'Reading', 
     'Shopping','Social Networking', 'Tools']
-    return [request.form[category] for category in categories if request.form.get(category)]
+    if request.form.get('category'):
+        category = request.form['category']
+        
+        return category
+    else:
+        return categories
 
 def get_appsize():
     appsizes = ["0-50","50-100","100-250","250-500",'500-10000']
