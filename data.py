@@ -40,6 +40,15 @@ def OperatorQuery(phone):
         return 'IOS'
 
 def results_query(operator, category, size, rating, age, price):
+    """ Query our own ontology in our local GraphDB SPARQL endpoint. The query depends 
+        on what the user wants the application to filter. If the user doesn't particularly 
+        filters on an aspect, this won't be filled in in the query.
+        
+        Because the instances are bound to our prefix, the spaces and special characters have been 
+        replaced with URL-characters, like %20 and %26. Therefore, the results are mutated to normal
+        characters, like a space or the &-sign. The characteristics of every mobile app are declared 
+        in a dictionairy. Every dictionairy represents an mobile application."""
+
     if operator == 'Android':
         operator_query = '?app a pr:AndroidApp .'
     elif operator == 'Apple':
