@@ -40,9 +40,11 @@ def OperatorQuery(phone):
 
 def results_query(operator, category, size, rating):
     if operator == 'Android':
-        operator_query = 'pr:AndroidApp'
+        operator_query = '?app a pr:AndroidApp .'
+    elif operator == 'Apple':
+        operator_query = '?app a pr:AppleApp .'
     else:
-        operator_query = 'pr:AppleApp'
+        operator_query = ''
     
     if type(category) == str:
         category_query = '?app a pr:%s .'%category
@@ -61,7 +63,7 @@ def results_query(operator, category, size, rating):
         
         SELECT *
         WHERE {
-            ?app a %s .
+            %s
             %s
             ?app pr:hasSize ?size
             FILTER(?size >= %s && ?size <= %s)
